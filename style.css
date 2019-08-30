@@ -1,0 +1,93 @@
+
+html {
+    background: rgb(88, 62, 27) url(https://previews.123rf.com/images/samiramay/samiramay1608/samiramay160800001/61054752-retro-mechanisms-and-machines-in-steampunk-style-on-textured-background-hand-drawn-graphic-illustrat.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'helvetica neue';
+    text-align: center;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    border: 20px solid rgba(190, 175, 140, 0.795);
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow:
+        0 0 0 4px rgba(0,0,0,0.6),
+        inset 0 0 0 5px rgb(92, 75, 39, 0.4),
+        inset 0 0 100px black,
+        0 0 10px rgba(0,0,0,0.1);
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.hand {
+    background: rgb(36, 17, 0);
+    transform-origin: 100%;
+    transition: 1s;
+    transition-timing-function: cubic-bezier(1,-0.09, 0, 2.54);
+}
+
+.point {
+    width: 15%;
+    height: 8px;
+    position: absolute;
+    top: 50%;
+    background: rgb(24, 11, 0);
+}
+
+.north {
+    margin-left: 125px;
+    transform: rotate(90deg);
+    margin-block-start: -125px;
+}
+
+.south {
+    margin-left: 125px;
+    transform: rotate(90deg);
+    margin-block-start: 125px;
+}
+
+.east {
+    margin-left: 250px;
+}
+
+.second-hand {
+    width: 50%;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+}
+
+.min-hand {
+    width: 50%;
+    height: 6px;
+    position: absolute;
+    top: 50%;
+}
+
+.hour-hand {
+    width: 35%;
+    height: 6px;
+    margin-left: 45px;
+    position: absolute;
+    top: 50%;
+}
